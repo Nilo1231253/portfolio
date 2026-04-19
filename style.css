@@ -1,0 +1,89 @@
+/* Basic Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif; /* Using standard fonts */
+}
+
+/* --- NAVIGATION --- */
+.pill-nav {
+    width: 100%;
+    padding-top: 20px;
+    text-align: center; /* Simple centering */
+}
+
+.nav-content {
+    background-color: #333333; /* Standard dark grey */
+    display: inline-block; /* Makes the div only as wide as content */
+    padding: 10px 20px;
+    border-radius: 50px; /* Still keeps the pill shape */
+}
+
+.logo-area {
+    float: left; /* Older way of aligning elements */
+    margin-right: 20px;
+}
+
+.profile-logo {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px; /* Center the letter G */
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.nav-links {
+    float: left;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.github-btn {
+    background-color: blue; /* Simple solid color instead of gradient */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+}
+
+.hero-image img {
+    width: 200px;      
+    height: 200px;     
+    border-radius: 150px; 
+    object-fit: cover; 
+    border: 2px solid grey;
+    margin-top: 20px;
+}
