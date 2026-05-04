@@ -5,11 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: white;
     color: black;
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* --- NAVIGATION --- */
@@ -17,7 +21,8 @@ body {
     width: 100%;
     padding: 15px 40px;
     background-color: #333333;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 100;
 }
 
@@ -119,11 +124,47 @@ body {
 }
 
 .gradient-text {
-    font-size: 30px;
     background: linear-gradient(to right, #6a00ff, #ff007f);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+}
+
+/* --- ABOUT SECTION --- */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    height: calc(100vh - 65px);
+    padding: 40px;
+    background-color: white;        /* ADD THIS */
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid grey;         /* CHANGE from #6a00ff to grey */
+}
+
+.about-text {
+    max-width: 550px;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    font-weight: bold;
     margin-bottom: 20px;
+    color: black;                   /* ADD THIS */
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
