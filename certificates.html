@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georcy Perez - Certificates</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pill-nav">
+        <div class="nav-content">
+            
+            <div class="logo-area">
+                <div class="profile-logo">G</div>
+                <span class="logo-text">Georcy Nilo Perez</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="techstack.html">Tech Stack</a></li>
+                <li><a href="certificates.html">Certificate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+        </div>
+    </div>
+
+    <div class="certificates-section">
+        <h2 class="certificates-title">My Certificates</h2>
+
+        <div class="certificates-grid">
+
+            <div class="cert-card" onclick="openLightbox('Images/certifications/c essentials 1.png', 'C Essentials 1')">
+                <img src="Images/certifications/c essentials 1.png" alt="C Essentials 1">
+                <p>C Essentials 1</p>
+            </div>
+
+            <div class="cert-card" onclick="openLightbox('Images/certifications/ms powerpoint.png', 'MS PowerPoint')">
+                <img src="Images/certifications/ms powerpoint.png" alt="MS PowerPoint">
+                <p>MS PowerPoint</p>
+            </div>
+
+            <div class="cert-card" onclick="openLightbox('Images/certifications/ms word 2019.png', 'MS Word 2019')">
+                <img src="Images/certifications/ms word 2019.png" alt="MS Word 2019">
+                <p>MS Word 2019</p>
+            </div>
+
+            <div class="cert-card" onclick="openLightbox('Images/certifications/networking basics.png', 'Networking Basics')">
+                <img src="Images/certifications/networking basics.png" alt="Networking Basics">
+                <p>Networking Basics</p>
+            </div>
+
+            <div class="cert-card" onclick="openLightbox('Images/certifications/python essentials 1.png', 'Python Essentials 1')">
+                <img src="Images/certifications/python essentials 1.png" alt="Python Essentials 1">
+                <p>Python Essentials 1</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="" alt="" id="lightbox-img">
+            <p id="lightbox-title"></p>
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(src, title) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-title').textContent = title;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
