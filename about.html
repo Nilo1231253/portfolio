@@ -12,36 +12,39 @@
 
     <div class="pill-nav">
         <div class="nav-content">
-            
             <div class="logo-area">
                 <div class="profile-logo">G</div>
                 <span class="logo-text">Georcy Nilo Perez</span>
             </div>
-            
-            <ul class="nav-links">
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="techstack.html">Tech Stack</a></li>
                 <li><a href="certificates.html">Certificate</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            
         </div>
     </div>
 
     <div class="about" id="about">
-
         <div class="about-image">
             <img src="Images/profile.png" alt="My Photo">
         </div>
-    
         <div class="about-text">
             <h2>About Me</h2>
             <p>I'm an aspiring network administrator and a hardworking team player with a solid foundation in programming and infrastructure basics. As a fast learner, I have developed a versatile skill set that includes C, basic Python, Java, Kotlin, and SQL database management. I am dedicated to applying my technical knowledge and collaborative spirit to solve complex problems and deliver efficient results in every project.</p>
             <p>My professional goal is to leverage my experience in networking basics to manage and secure robust digital architectures. I am committed to mastering advanced network administration and infrastructure management to ensure seamless connectivity within a corporate environment. I aim to contribute my adaptability and technical proficiency to a dynamic team focused on excellence and innovation.</p>
         </div>
-    
     </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georcy Perez - Tech Stack</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+
+    <div class="pill-nav">
+        <div class="nav-content">
+            <div class="logo-area">
+                <div class="profile-logo">G</div>
+                <span class="logo-text">Georcy Nilo Perez</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="techstack.html">Tech Stack</a></li>
+                <li><a href="certificates.html">Certificate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="techstack-section">
+        <h2 class="techstack-title">My Tech Stack</h2>
+        <div class="techstack-grid">
+
+            <div class="tech-card" onclick="showSkill('HTML', 'fa-brands fa-html5', 'The standard markup language for creating web pages and web applications.')">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('CSS', 'fa-brands fa-css3-alt', 'A stylesheet language used to describe the presentation of a document written in HTML.')">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('Python', 'fa-brands fa-python', 'A versatile, high-level programming language known for its simplicity and readability.')">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('Java', 'fa-brands fa-java', 'A powerful object-oriented programming language widely used for building enterprise applications.')">
+                <i class="fa-brands fa-java"></i>
+                <span>Java</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('C', 'fa-solid fa-c', 'A foundational programming language that provides low-level memory access and efficient performance.')">
+                <i class="fa-solid fa-c"></i>
+                <span>C</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('SQL', 'fa-solid fa-database', 'A standard language for managing and manipulating relational databases.')">
+                <i class="fa-solid fa-database"></i>
+                <span>SQL</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('Kotlin', 'fa-brands fa-android', 'A modern programming language for Android development, fully interoperable with Java.')">
+                <i class="fa-brands fa-android"></i>
+                <span>Kotlin</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('Git', 'fa-brands fa-git-alt', 'A distributed version control system for tracking changes in source code during development.')">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+            </div>
+
+            <div class="tech-card" onclick="showSkill('GitHub', 'fa-brands fa-github', 'A cloud-based platform for hosting and collaborating on Git repositories.')">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+
+        function showSkill(name, icon, description) {
+            Swal.fire({
+                title: name,
+                text: description,
+                icon: 'info',
+                confirmButtonText: 'Got it!',
+                confirmButtonColor: '#6a00ff',
+            });
+        }
+    </script>
+
+</body>
+</html>
