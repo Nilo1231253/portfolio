@@ -13,7 +13,7 @@ body {
     background-color: white;
     color: black;
     font-family: Arial, sans-serif;
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* --- NAVIGATION --- */
@@ -71,20 +71,6 @@ body {
     color: white;
 }
 
-.github-btn {
-    background-color: #6a00ff;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.github-btn:hover {
-    background-color: #ff007f;
-}
-
 /* --- HOME SECTION --- */
 .home {
     display: flex;
@@ -123,14 +109,6 @@ body {
     line-height: 1.6;
 }
 
-.gradient-text {
-    background: linear-gradient(to right, #6a00ff, #ff007f);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
 /* --- ABOUT SECTION --- */
 .about {
     display: flex;
@@ -140,7 +118,7 @@ body {
     gap: 60px;
     height: calc(100vh - 65px);
     padding: 40px;
-    background-color: white;        /* ADD THIS */
+    background-color: white;
 }
 
 .about-image img {
@@ -148,7 +126,7 @@ body {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid grey;         /* CHANGE from #6a00ff to grey */
+    border: 3px solid grey;
 }
 
 .about-text {
@@ -159,7 +137,7 @@ body {
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: black;                   /* ADD THIS */
+    color: black;
 }
 
 .about-text p {
