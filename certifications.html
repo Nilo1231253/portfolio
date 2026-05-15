@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
-
+ 
     <div class="pill-nav">
         <div class="nav-content">
             <div class="logo-area">
@@ -29,45 +29,57 @@
             </ul>
         </div>
     </div>
-
+ 
     <div class="certificates-section">
         <h2 class="certificates-title">My Certifications</h2>
-
+ 
         <div class="certificates-grid">
-
+ 
             <div class="cert-card">
                 <img src="Images/certifications/ccert.png" alt="C Essentials 1"
                     onclick="openLightbox('Images/certifications/ccert.png', 'C Essentials 1')">
                 <a href="https://www.credly.com/badges/4672942f-0455-45e9-8615-e86af91198e0/public_url" target="_blank" class="cert-label">C Essentials 1</a>
             </div>
-
+ 
             <div class="cert-card">
                 <img src="Images/certifications/powerpoint.png" alt="MS PowerPoint"
                     onclick="openLightbox('Images/certifications/powerpoint.png', 'MS PowerPoint')">
                 <a href="https://www.credly.com/badges/7a89542d-ac61-48c9-b618-9a389b446ee7/public_url" target="_blank" class="cert-label">MS PowerPoint</a>
             </div>
-
+ 
             <div class="cert-card">
                 <img src="Images/certifications/msword.png" alt="MS Word 2019"
                     onclick="openLightbox('Images/certifications/msword.png', 'MS Word 2019')">
                 <a href="https://www.credly.com/badges/3436ec94-fbcb-4f31-8081-61c396c62bea/public_url" target="_blank" class="cert-label">MS Word 2019</a>
             </div>
-
+ 
             <div class="cert-card">
                 <img src="Images/certifications/networking.png" alt="Networking Basics"
                     onclick="openLightbox('Images/certifications/networking.png', 'Networking Basics')">
                 <a href="https://www.credly.com/badges/068221e6-2d07-49b4-8735-63fcced14ea5/public_url" target="_blank" class="cert-label">Networking Basics</a>
             </div>
-
+ 
             <div class="cert-card">
                 <img src="Images/certifications/python.png" alt="Python Essentials 1"
                     onclick="openLightbox('Images/certifications/python.png', 'Python Essentials 1')">
                 <a href="https://www.credly.com/badges/f8eff5a8-09a7-4518-a608-2786466bef40/public_url" target="_blank" class="cert-label">Python Essentials 1</a>
             </div>
-
+ 
+            <div class="cert-card">
+                <img src="Images/certifications/dbmscert.png" alt="Database Management"
+                    onclick="openLightbox('Images/certifications/dbmscert.png', 'Database Management')">
+                <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=8903173363GN" target="_blank" class="cert-label">Database Management</a>
+            </div>
+ 
+            <div class="cert-card">
+                <img src="Images/certifications/secert.png" alt="Software Engineer"
+                    onclick="openLightbox('Images/certifications/secert.png', 'Software Engineer')">
+                <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=6067369659GN" target="_blank" class="cert-label">Software Engineer</a>
+            </div>
+ 
         </div>
     </div>
-
+ 
     <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <div class="lightbox-content" onclick="event.stopPropagation()">
@@ -78,18 +90,18 @@
             <p id="lightbox-title"></p>
         </div>
     </div>
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('open');
         }
-
+ 
         function openLightbox(src, title) {
             document.getElementById('lightbox-img').src = src;
             document.getElementById('lightbox-title').textContent = title;
             document.getElementById('lightbox').classList.add('active');
-
+ 
             Swal.fire({
                 toast: true,
                 position: 'top-end',
@@ -100,15 +112,16 @@
                 timerProgressBar: true,
             });
         }
-
+ 
         function closeLightbox() {
             document.getElementById('lightbox').classList.remove('active');
         }
-
+ 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeLightbox();
         });
     </script>
-
+ 
 </body>
 </html>
+ 

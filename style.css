@@ -235,21 +235,28 @@ body {
     color: black;
 }
 
+/* GRID */
 .certificates-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* CARD */
 .cert-card {
-    width: 220px;
-    cursor: pointer;
-    border-radius: 12px;
+    width: 100%;
+    background-color: white;
+    border-radius: 14px;
     overflow: hidden;
     border: 2px solid #ddd;
     transition: 0.3s;
-    background-color: white;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cert-card:hover {
@@ -258,22 +265,27 @@ body {
     box-shadow: 0 10px 20px rgba(106, 0, 255, 0.15);
 }
 
+/* IMAGE */
 .cert-card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-    cursor: pointer;
+    height: 260px;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    display: block;
 }
 
+/* LABEL */
 .cert-label {
     display: block;
-    padding: 10px;
-    font-size: 14px;
+    padding: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #333;
     text-decoration: none;
     text-align: center;
     transition: 0.3s;
+    min-height: 60px;
 }
 
 .cert-label:hover {
@@ -302,7 +314,7 @@ body {
 
 .lightbox-content {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     width: 90%;
     text-align: center;
 }
@@ -396,7 +408,7 @@ body {
 
 /* =====================
    RESPONSIVE
-   ===================== */
+===================== */
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -425,7 +437,8 @@ body {
         display: flex;
     }
 
-    .home {
+    .home,
+    .about {
         flex-direction: column;
         text-align: center;
         padding: 40px 20px;
@@ -437,46 +450,25 @@ body {
         height: 220px;
     }
 
-    .home-text h1 {
-        font-size: 36px;
-    }
-
-    .home-text h3 {
-        font-size: 18px;
-    }
-
-    .description {
-        font-size: 15px;
-    }
-
-    .about {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-        gap: 30px;
-    }
-
     .about-image img {
         width: 200px;
         height: 200px;
     }
 
-    .about-text h2 {
-        font-size: 32px;
+    .home-text h1 {
+        font-size: 36px;
     }
 
-    .about-text p {
-        font-size: 15px;
-    }
-
+    .about-text h2,
     .techstack-title,
     .certificates-title,
     .contact-title {
         font-size: 32px;
     }
 
-    .techstack-grid {
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 }
 
@@ -488,31 +480,16 @@ body {
         height: 180px;
     }
 
-    .home-text h1 {
-        font-size: 28px;
-    }
-
-    .home-text h3 {
-        font-size: 16px;
-    }
-
-    .description {
-        font-size: 14px;
-    }
-
     .about-image img {
         width: 160px;
         height: 160px;
     }
 
-    .about-text h2 {
-        font-size: 26px;
+    .home-text h1 {
+        font-size: 28px;
     }
 
-    .about-text p {
-        font-size: 14px;
-    }
-
+    .about-text h2,
     .techstack-title,
     .certificates-title,
     .contact-title {
@@ -524,20 +501,13 @@ body {
         gap: 12px;
     }
 
-    .tech-card {
-        padding: 16px 8px;
-    }
-
-    .tech-card i {
-        font-size: 28px;
-    }
-
     .certificates-grid {
-        gap: 16px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .cert-card {
-        width: calc(50% - 8px);
+    .cert-card img {
+        height: 220px;
     }
 
     .contact-cards {
@@ -553,6 +523,7 @@ body {
 
 /* Very small screens */
 @media (max-width: 320px) {
+
     .techstack-grid {
         grid-template-columns: repeat(2, 1fr);
     }
